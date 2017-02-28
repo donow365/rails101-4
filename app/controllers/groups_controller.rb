@@ -23,6 +23,16 @@ def create
   redirect_to groups_path
 end
 
+def update
+  @group = Group.find(params[:id])
+  @group.save
+  redirect_to edit_group_path
+end
+
+
+
+
+
 private
 
 def group_params
